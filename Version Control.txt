@@ -1,0 +1,26 @@
+Version Control Education & Best Practices
+By Datacamp
+Keeping track of changes to a project is important to answer comments & supporting info for reviewers, editors, and readers
+Software, such as Git, tracks changes (what, when and who) and synchronize to a central location
+Best PracticesRecommendations
+1.	Back up (almost) everything created by a human as soon as it is created
+2.	Keep changes small to be able to investigate specific changes in a version
+a.	Rule of thumb group changes you could imagine wanting to undo in one step
+3.	Share changes frequently
+4.	Create, maintain, and use a checklist for saving and sharing changes to a project
+a.	Write log messages that explain any changes, size and content of individual changes, style guidelines for code, update to-do lists, and bans on committing half-done workbroken code
+5.	Store each project in a folder that is mirrored off the working machine
+a.	Use a system such as Dropbox or a remote repository such as GitHub
+Approach 1 Manual Versioning
+•	Create a file title “CHANGELOG.txt” under a documentation folder to make dated notes about changes to the project
+•	Make copies of projects into folders that are date-titled whenever a significant change is made
+•	Have to coordinate so only one person is working on project at a time
+Approach 2 Version Control Systems
+•	Requires less self-discipline as it automates some steps
+•	What to putnot put in Version Control Systems
+o	File comparison is optimized for plain text (i.e. source code)
+o	Raw data shouldn’t change, therefore no version control needed
+o	Results should be able to be generated from software
+?	Can be kept if small and want to compare across versions
+o	Benchmark for size limit is around 100 MB
+o	Watch for sharing sensitive data
