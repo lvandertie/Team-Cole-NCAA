@@ -19,3 +19,5 @@ total = total.groupby(['Season', 'TeamID']).mean()
 print(total)
 
 
+# add buttholes
+
