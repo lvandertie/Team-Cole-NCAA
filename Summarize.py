@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('DataFiles/RegularSeasonDetailedResults.csv')
+df = pd.read_csv("Users/coleheflin/Documents/Men's NCAA Competition/DataFiles")
 
 
 # Select columns for regression
@@ -19,5 +19,4 @@ total = total.groupby(['Season', 'TeamID']).mean()
 print(total)
 
 
-# add buttholes
 
