@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from sklearn.model_selection import train_test_split
 
 regular_season_data = pd.read_csv("/Users/coleheflin/Documents/Men's NCAA Competition/DataFiles/RegularSeasonDetailedResults.csv")
 tournament_data = pd.read_csv("/Users/coleheflin/Documents/Men's NCAA Competition/DataFiles/NCAATourneyCompactResults.csv")
@@ -20,11 +21,11 @@ total = pd.concat([winners, losers])
 total = total.groupby(['Season', 'TeamID'], as_index=False).mean()
 total = total.rename(columns={'Score' : 'PPG', 'Assist' : 'APG'})
 
+# Merged tournament and regular season summary statistics to set up regression
 winner_df = pd.merge(tournament_data, total,  how='inner', left_on=['Season','WTeamID'], right_on = ['Season','TeamID'])
 winner_df.drop(['TeamID'], inplace=True, axis=1)
 
 tournament_stats = pd.merge(winner_df, total,  how='inner', left_on=['Season','LTeamID'], right_on = ['Season','TeamID'], suffixes=('_W', '_L'))
 tournament_stats.drop(['TeamID'], inplace=True, axis=1)
 print(tournament_stats)
-
 
