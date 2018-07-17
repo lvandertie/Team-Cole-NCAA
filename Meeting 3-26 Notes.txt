@@ -1,0 +1,18 @@
+Predictors
+•	Team 1 PPG
+•	Team 2 PPG
+•	Team 1 – Team 2 PPG
+•	Team 1 APG
+•	Team 2 APG
+•	PPG interaction term
+•	APG Interaction term
+•	Team 1 stat
+•	Team 2 stats
+•	Stat interaction term
+
+Tm1 PPG		Tm2 PPG		Tm1 APG		Tm2 APG		Winner?
+								1
+								1
+								2
+								1
+								2
